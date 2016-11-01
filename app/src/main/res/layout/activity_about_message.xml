@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar_actionbar"
+        android:layout_width="match_parent"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:minHeight="?android:attr/actionBarSize"
+        android:layout_height="?android:attr/actionBarSize"
+        android:fontFamily="sans-serif"
+        android:background="#5FB14F">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сообщение"
+            android:id="@+id/toolbar_title"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+            android:id="@+id/progressBar"
+            app:mlpb_show_arrow="false"
+            app:mlpb_arrow_height="5dp"
+            app:mlpb_arrow_width="10dp"
+            app:mlpb_enable_circle_background="true"
+            app:mlpb_progress_stoke_width="5dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:id="@+id/scrollContainer"
+            android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="15dp"
+                android:paddingBottom="20dp"
+                android:id="@+id/mainLayout"
+                android:paddingTop="10dp"
+                android:background="#FFFFFF">
+
+                <ImageView
+                    android:id="@+id/imageAboutMessage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignTop="@+id/nameAboutMessage"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/nameAboutMessage"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imageAboutMessage"
+                    android:layout_alignParentTop="true"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#333333"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp" />
+                <TextView
+                    android:id="@+id/addressAboutMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#929292"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/dateAboutMessage"
+                    android:layout_alignLeft="@+id/numberAboutMessage"
+                    android:layout_alignStart="@+id/numberAboutMessage"
+                    android:layout_alignRight="@+id/line"
+                    android:layout_alignEnd="@+id/line" />
+                <TextView
+                    android:id="@+id/numberAboutMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#929292"
+                    android:layout_toRightOf="@+id/imageAboutMessage"
+                    android:layout_below="@+id/addressAboutMessage"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_marginLeft="35dp"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_alignRight="@+id/line"
+                    android:layout_alignEnd="@+id/line" />
+                <ImageView
+                    android:id="@+id/place"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:background="@drawable/ic_place"
+                    android:layout_alignTop="@+id/addressAboutMessage"
+                    android:layout_toRightOf="@+id/imageAboutMessage"
+                    android:layout_toEndOf="@+id/imageAboutMessage"
+                    android:layout_marginLeft="12dp" />
+                <ImageView
+                    android:id="@+id/phone"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/ic_phone"
+                    android:layout_alignBottom="@+id/numberAboutMessage"
+                    android:layout_alignLeft="@+id/place"
+                    android:layout_alignStart="@+id/place"
+                    android:layout_marginLeft="2dp" />
+
+                <View
+                android:id="@+id/line"
+                android:layout_width="320dp"
+                android:layout_height="0.1dp"
+                android:background="#D9D9D9"
+                android:layout_marginTop="22dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/numberAboutMessage" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textAboutMessage"
+                    android:textColor="#333333"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_below="@+id/bigImageAboutMessage"
+                    android:layout_alignLeft="@+id/bigImageAboutMessage"
+                    android:layout_alignStart="@+id/bigImageAboutMessage"
+                    android:paddingLeft="15dp"
+                    android:layout_alignRight="@+id/bigImageAboutMessage"
+                    android:layout_alignEnd="@+id/bigImageAboutMessage"
+                    android:paddingRight="15dp"
+                    android:autoLink="web" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/dateAboutMessage"
+                    android:layout_below="@+id/nameAboutMessage"
+                    android:layout_alignLeft="@+id/nameAboutMessage"
+                    android:layout_alignStart="@+id/nameAboutMessage"
+                    android:textSize="12sp"
+                    android:textColor="#929292"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/typeAboutMessage"
+                    android:textColor="#2389FF"
+                    android:textSize="12sp"
+                    android:layout_alignTop="@+id/dateAboutMessage"
+                    android:layout_toRightOf="@+id/dateAboutMessage"
+                    android:layout_toEndOf="@+id/dateAboutMessage"
+                    android:layout_marginLeft="6dp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <ImageView
+                    android:layout_width="320dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/bigImageAboutMessage"
+                    android:layout_below="@+id/line"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+</LinearLayout>
